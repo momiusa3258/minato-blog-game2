@@ -1,18 +1,21 @@
+// src/App.jsx (修正後)
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import BlogLayout from './components/BlogLayout';
 import ArticlePage from './pages/ArticlePage';
 import ProfilePage from './pages/ProfilePage';
 import EndingPage from './pages/EndingPage';
 import ThemePage from './pages/ThemePage';
+import HomePage from './pages/HomePage'; // ★★★ 新しい玄関を、インポートします ★★★
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<BlogLayout />}>
-          <Route index element={<Navigate to="/article/1" replace />} />
+          {/* ★★★ 始まりの場所を、HomePageに変更します ★★★ */}
+          <Route index element={<HomePage />} />
           <Route path="article/:articleId" element={<ArticlePage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="theme/:themeName" element={<ThemePage />} />

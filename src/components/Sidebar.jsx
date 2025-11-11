@@ -1,22 +1,13 @@
-// frontend/src/components/Sidebar.jsx (修正後)
+// src/components/Sidebar.jsx (改装後)
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { articles } from '../data/gameData';
 
 const Sidebar = () => {
-  const publicArticles = Object.values(articles).filter(article => !article.isProtected);
-
-  const themes = publicArticles.reduce((acc, article) => {
-    const theme = article.theme;
-    if (theme) {
-      if (!acc[theme]) {
-        // ★★★ firstArticleIdはもう不要なので、カウントだけにする ★★★
-        acc[theme] = { count: 0 };
-      }
-      acc[theme].count++;
-    }
-    return acc;
-  }, {});
+  // ★★★ 全ての記事を、対象にします ★★★
+  const allArticles = Object.values(articles);
+  // 記事IDの降順（新しい順）に並び替える
+  const sortedArticles = allArticles.sort((a, b) => b.id - a.id);
 
   return (
     <aside id="sidebar">
@@ -31,14 +22,18 @@ const Sidebar = () => {
         </div>
       </div>
 
-      {/* --- テーマウィジェット (リンク先を修正) --- */}
-      <div className="widget theme-widget">
-        <h3 className="widget-title">テーマ</h3>
+      {/* ★★★「最新記事」ウィジェットを、改装 ★★★ */}
+      <div className="widget latest-articles-widget">
+        <h3 className="widget-title">全ての記事</h3>
         <ul className="widget-list">
-          {Object.entries(themes).map(([themeName, data]) => (
-            <li key={themeName}>
-              {/* ★★★ リンク先を /theme/テーマ名 に変更 ★★★ */}
-              <Link to={`/theme/${themeName}`}>{themeName} ({data.count})</Link>
+          {/* 新しい順に並べた記事のリストを生成 */}
+          {sortedArticles.map(article => (
+            <li key={article.id}>
+              <Link to={`/article/${article.id}`}>
+                {article.title}
+                {/* ★★★ 保護された記事には、鍵マークを表示します ★★★ */}
+                {article.isProtected && <span style={{ marginLeft: '5px', color: '#999' }}>[鍵]</span>}
+              </Link>
             </li>
           ))}
         </ul>
