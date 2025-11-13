@@ -1,4 +1,4 @@
-// src/App.jsx (修正後)
+// src/App.jsx (★★★★★ 最終完成版 ★★★★★)
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -7,14 +7,15 @@ import ArticlePage from './pages/ArticlePage';
 import ProfilePage from './pages/ProfilePage';
 import EndingPage from './pages/EndingPage';
 import ThemePage from './pages/ThemePage';
-import HomePage from './pages/HomePage'; // ★★★ 新しい玄関を、インポートします ★★★
+import HomePage from './pages/HomePage';
+import ScrollToTop from './components/ScrollToTop'; // ★★★ 新しい魔法使いを、インポートします ★★★
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* ★★★ ここで、魔法使いを召喚します ★★★ */}
       <Routes>
         <Route path="/" element={<BlogLayout />}>
-          {/* ★★★ 始まりの場所を、HomePageに変更します ★★★ */}
           <Route index element={<HomePage />} />
           <Route path="article/:articleId" element={<ArticlePage />} />
           <Route path="profile" element={<ProfilePage />} />

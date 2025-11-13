@@ -255,3 +255,23 @@ a:hover {
   transform: translateY(0);
   animation: fadeIn 1s ease-in;
 }
+
+/* --- 記事の前後ナビゲーション用のスタイル --- */
+.article-navigation {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+  
+  .article-navigation a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .article-navigation a:hover {
+    text-decoration: underline;
+    color: #ff6600;
+  }
