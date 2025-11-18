@@ -8,10 +8,7 @@ const encodedAnswers = {
     'a2FzdW1pdHlvdQ==', // "kasumityou"
     'a2FzdW1pY3lvdQ==', // "kasumicyou"
   ],
-  '7': [
-    'aXpha2F5YV90c3VraQ==', // "izakaya_tsuki"
-    'aXpha2F5YV90dWtp',     // "izakaya_tuki"
-  ],
+  '7': ['d2hhbGU='],           //"whale"
   '8': ['cw=='],               // "s"
   '9': ['MjAx'],               // "201"
   '10': ['dA=='],              // "t"
