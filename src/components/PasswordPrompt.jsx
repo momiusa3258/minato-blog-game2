@@ -9,7 +9,7 @@ const encodedAnswers = {
     'a2FzdW1pY3lvdQ==', // "kasumicyou"
   ],
   '7': ['d2hhbGU='],           //"whale"
-  '8': ['cw=='],               // "s"
+  '8': ['c2F0b3U='],               // "satou"
   '9': ['MjAx'],               // "201"
   '10': ['dA=='],              // "t"
   '11': ['YW9p'],              // "aoi"
