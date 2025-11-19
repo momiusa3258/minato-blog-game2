@@ -275,3 +275,19 @@ a:hover {
     text-decoration: underline;
     color: #ff6600;
   }
+  /* src/index.css の一番下に追加 */
+
+/* --- 隠し文字用のスタイル --- */
+.hidden-text {
+    /* 背景色と同じ色にすることで、見えなくする */
+    color: #ffffff; 
+    /* プレイヤーがマウスで選択（ドラッグ）した時に、文字が見えるようになる */
+    transition: color 0.2s;
+  }
+  
+  /* マウスカーソルを乗せた時に、ほんの少しだけ、ヒントを与える（任意） */
+  .hidden-text:hover {
+    /* ほんの少しだけ、影をつけて、そこに「何か」があることを示唆する */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
