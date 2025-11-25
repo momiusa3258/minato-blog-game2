@@ -38,11 +38,11 @@ const HomePage = () => {
               <time>{article.date}</time> | 
               <span className="category">{article.theme}</span>
             </p>
-
-            <Link to={`/article/${article.id}`} style={{ fontSize: '20px', textDecoration: 'none', color: '#0066cc', fontWeight: 'bold' }}>
-              {article.title} 
-              {article.isProtected && <span style={{ marginLeft: '10px', color: '#999' }}>[鍵]</span>}
-            </Link>
+            
+          <Link to={`/home/article/${article.id}`} style={{ fontSize: '20px', textDecoration: 'none', color: '#0066cc', fontWeight: 'bold' }}>
+            {article.title} 
+            {article.isProtected && <span style={{ marginLeft: '10px', color: '#999' }}>[鍵]</span>}
+          </Link>
             
             {article.isProtected ? (
               <p style={{ margin: '8px 0 0', color: '#666', fontStyle: 'italic' }}>

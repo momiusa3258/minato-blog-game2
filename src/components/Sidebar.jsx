@@ -18,7 +18,7 @@ const Sidebar = () => {
           <img src="images/profile-coffee.jpg" alt="コーヒーカップ" className="profile-image" />
           <p className="profile-name">湊 (Minato)</p>
           <p className="profile-bio">静かな場所が好きです。好きなもの: 深煎りコーヒー、白黒映画、水。</p>
-          <Link to="/profile">» プロフィール詳細へ</Link>
+          <Link to="/home/profile">» プロフィール詳細へ</Link>
         </div>
       </div>
 
@@ -29,7 +29,7 @@ const Sidebar = () => {
           {/* 新しい順に並べた記事のリストを生成 */}
           {sortedArticles.map(article => (
             <li key={article.id}>
-              <Link to={`/article/${article.id}`}>
+              <Link to={`/home/article/${article.id}`}>
                 {article.title}
                 {/* ★★★ 保護された記事には、鍵マークを表示します ★★★ */}
                 {article.isProtected && <span style={{ marginLeft: '5px', color: '#999' }}>[鍵]</span>}

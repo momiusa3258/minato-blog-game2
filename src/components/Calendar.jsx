@@ -37,7 +37,7 @@ const Calendar = () => {
     const articleId = articleDates[day];
     calendarDays.push(
       <td key={day} className={articleId ? "calendar-day has-post" : "calendar-day"}>
-        {articleId ? <Link to={`/article/${articleId}`}>{day}</Link> : day}
+        {articleId ? <Link to={`/home/article/${articleId}`}>{day}</Link> : day}
       </td>
     );
   }
