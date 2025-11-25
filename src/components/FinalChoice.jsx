@@ -1,4 +1,4 @@
-// src/components/FinalChoice.jsx (新規作成)
+// src/components/FinalChoice.jsx (★★★★★ これが、最後の、本当の、絶対的な正義です ★★★★★)
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,20 +11,27 @@ const FinalChoice = ({ isVisible }) => {
     if (choice === 'report') {
       setShowReportPrompt(true);
     } else {
-      navigate('/ending/2');
+      navigate('/ending/2'); // 「見過ごす」が押されたら、エンディング2へ
     }
   };
 
   const handleReportSubmit = (e) => {
     e.preventDefault();
-    if (locationInput.toLowerCase() === '水族館'||'すいぞくかん'||'suizokukan'||'suizokukann') {
-      navigate('/ending/1');
+    // プレイヤーが入力しうる、全ての「正解」を、ここに、優しく、用意します
+    const validAnswers = ['水族館','すいぞくかん','suizokukan','suizokukann'];
+    
+    // プレイヤーの答えが、この、優しいリストの中に、含まれているか？
+    if (validAnswers.includes(locationInput)) {
+      navigate('/ending/1'); // 含まれていれば, エンディング1-Aへ
     } else {
-      navigate('/ending/3');
+      navigate('/ending/3'); // 含まれていなければ, エンディング1-Bへ
     }
   };
 
-  if (!isVisible) return null;
+  // もし、出番でなければ、舞台袖で、静かに、待機する
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <div className={'final-choice active'}>

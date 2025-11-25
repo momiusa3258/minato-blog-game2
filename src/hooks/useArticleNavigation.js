@@ -1,3 +1,4 @@
+
 // src/hooks/useArticleNavigation.js (★★★★★ これが、最後の、本当の、絶対的な正義です ★★★★★)
 import { articles } from '../data/gameData';
 
