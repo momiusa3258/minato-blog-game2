@@ -1,0 +1,59 @@
+/* src/pages/IntroPage.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.intro-box {
+    max-width: 650px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #333;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.intro-box h1 {
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+}
+
+.intro-box p {
+    font-size: 15px;
+    line-height: 1.9;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.intro-box .button {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #888;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.intro-box .button:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}

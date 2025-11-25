@@ -1,20 +1,20 @@
-// src/components/PasswordPrompt.jsx (★★★★★ 究極の最終形態 ★★★★★)
+// src/components/PasswordPrompt.jsx
 import React, { useState } from 'react';
 
 // 全ての正解パスワード（通常＋揺らぎ許容）を、難読化して、ここに、ただ一つ、集約する
 const encodedAnswers = {
   '6': [
-    'a2FzdW1pY2hvdQ==', // "kasumichou"
-    'a2FzdW1pdHlvdQ==', // "kasumityou"
-    'a2FzdW1pY3lvdQ==', // "kasumicyou"
+    'a2FzdW1pY2hvdQ==', 
+    'a2FzdW1pdHlvdQ==', 
+    'a2FzdW1pY3lvdQ==', 
   ],
-  '7': ['d2hhbGU='],           //"whale"
-  '8': ['c2F0b3U='],               // "satou"
-  '9': ['bWl5YWtl'],               // "miyake"
-  '10': ['MjAx'],              // "201"
-  '11': ['b3JpdG8='],              // "orito"
-  '12': ['MTEwNw=='],          // "1107"
-  '13': ['a3VyYWdl'],           // "kurage"
+  '7': ['d2hhbGU='],           
+  '8': ['c2F0b3U='],               
+  '9': ['bWl5YWtl'],               
+  '10': ['MjAx'],              
+  '11': ['b3JpdG8='],             
+  '12': ['MTEwNw=='],          
+  '13': ['a3VyYWdl'],           
 };
 
 const PasswordPrompt = ({ articleId, hint, onCorrectPassword }) => {

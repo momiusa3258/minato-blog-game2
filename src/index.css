@@ -5,7 +5,10 @@
   favorite_element: aqua
   - A little easter egg for visitors :)
 */
+/* src/index.css の、一番上に追加 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
+/* ... 以下、既存のCSS ... */
 /* --- 基本設定 --- */
 body {
     font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
