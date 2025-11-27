@@ -12,12 +12,12 @@ export const articles = {
   'weiffd': { id: 'weiffd', date: '2025-10-25', isProtected: true, title: '忘れられた事件', theme: '隠された記事', hint: '私が全てを失った場所の町名は？', content: `この記録を、誰かが見ることはあるのだろうか。\n\n警察は、事件を「終わらせた」。\n未解決事件、という、無責任なラベルを貼って、分厚いファイルの、一番、奥に、押し込んだ。\n彼らが、埃かぶった資料の山に、真実を埋もれさせている間、私は、たった一人で、この10年間、真実の欠片を、拾い集めてきた。\nあの日、あの場所にいた、3人の悪魔。
 \n娘に、最初に目をつけた、あの、下劣なS。\n人として、偽りの笑顔を浮かべ、警察を欺いた、あの、狡猾なM。\nそして、その、全てを企て、あの子を、私の腕から奪い去った、あの、主犯のO。\n警察が、放棄した「正義」。\nならば、私が、執行する。\n\nこれは、復讐ではない。\n10年遅れただけの、たった一つの「真実」の記録だ。` 
   },
-  '47reuyecb': { id: '47reuyecb', date: '2025-11-01', isProtected: true, title: '最初の場所', theme: '隠された記事', hint: 'xs4が、あの夜、仲間と飲んでいた店の名前は？ヒントは「月」', content: `xs4は、今も、酒を飲んで生きている。\n調べ上げた。奴の行きつけの店。「bar WHALE」。\n今夜、私が、最初の客だ。\n\n[IMAGE:images/mikaka2.jpg]` },
+  '47reuyecb': { id: '47reuyecb', date: '2025-11-01', isProtected: true, title: '最初の場所', theme: '隠された記事', hint: 'xs4が、あの夜、仲間と飲んでいた店の名前は？ヒントは「月」', content: `xs4は、今も、酒を飲んで生きている。\n調べ上げた。奴の経営する店。「bar WHALE」。\n今夜、私が、最後の客だ。\n\n[IMAGE:images/mikaka2.jpg]` },
   'z.lsd': { id: 'z.lsd', date: '2025-11-04', isProtected: true, title: '一人目', theme: '隠された記事', hint: 'xs4とは誰か？手元をよく見て', content: `佐藤の息の根を、止めた。\n奴は、最後まで、何も思い出さなかった。\nそれでいい。ただ、消えればいい。\nあと、二人。[IMAGE:images/iphone.jpg]` },
 
   // --- 第3部：第二、第三の復讐 ---
   'yurtuyroi':  {id: 'yurtuyroi', date: '2025-11-05', isProtected: true, title: '二人目', theme: '隠された記事', hint: 'Mの名前は？', content: `二人目の男、三宅。隣の部屋に住んでいた男。\nあの夜、彼は、何も見なかったと証言した。嘘つき。\n奴は、当時と同じ場所で、息を潜めて暮らしている。` },
-  'iuyerewv': { id: 'iuyerewv', date: '2025-11-07', isProtected: true, title: '二人目の男', theme: '隠された記事', hint: '二人目の男、Mが住んでいた部屋番号は？', content: `三宅も、消した。\nこれで、あと一人。\n最後の男、O。奴だけは、絶対に、この手で。\n「真実は目に見えないところにある。」\n\n\n[HIDDEN]最後は奴を…「折戸」を殺すだけ…[/HIDDEN]` },
+  'iuyerewv': { id: 'iuyerewv', date: '2025-11-07', isProtected: true, title: '二人目の男', theme: '隠された記事', hint: '二人目の男、Mが住んでいた部屋番号は？', content: `三宅も、消した。\nこれで、あと一人。\n最後の男、O。奴だけは、絶対に、この手で。\n「真実は目に見えるとは限らない。」\n\n\n[HIDDEN]最後は奴を…「折戸」を殺すだけ…[/HIDDEN]` },
   'pa;xa': { id: 'pa;xa', date: '2025-12-06', isProtected: true, title: '最後の男', theme: '隠された記事', hint: 'Oの名前は？君は本当にこのブログのすべてを見た？', content: `主犯、折戸。あの日、青いトラックに乗って、あの子を連れ去った男。\n奴は、全てを奪った。\n10年間、ずっと、この日のために生きてきた。\nあの子が、最後に私にくれた宝物。それが、最後の道標だ。[IMAGE:images/1107.jpg]` },
   'sdjkjklklj': { id: 'sdjkjklklj', date: '2025-12-09', isProtected: true, title: '復讐の終わり', theme: '隠された記事', hint: '“あの子”の誕生日', content: `全て、終わった。\n折戸も、私の手で、裁いた。\n長かった。本当に、長かった。\nもう、この世界に、未練はない。` },
 

@@ -9,6 +9,7 @@ import ThemePage from './pages/ThemePage';
 import HomePage from './pages/HomePage';
 import IntroPage from './pages/IntroPage';
 import ScrollToTop from './components/ScrollToTop';
+import GameClearPage from './pages/GameClearPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         </Route>
 
         <Route path="/ending/:endingId" element={<EndingPage />} />
+        <Route path="/gameclear" element={<GameClearPage />} />
       </Routes>
     </Router>
   );

@@ -29,7 +29,7 @@ const EndingPage = () => {
         <div className="ending-content">
           <h2>{ending.title}</h2>
           <p>{ending.text}</p>
-          <Link to="/">ブログのトップに戻る</Link>
+          <Link to="/gameclear">物語の終わりへ</Link>
         </div>
       ) : (
         <p>エンディングが見つかりません。</p>
