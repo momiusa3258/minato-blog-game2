@@ -1,5 +1,6 @@
 // src/components/PasswordPrompt.jsx
 import React, { useState } from 'react';
+import '../css/PasswordPrompt.css';
 
 // 全ての正解パスワード（通常＋揺らぎ許容）を、難読化して、集約する
 const encodedAnswers = {

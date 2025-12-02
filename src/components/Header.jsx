@@ -1,4 +1,5 @@
 // frontend/src/components/Header.jsx
+import '../css/Header.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 

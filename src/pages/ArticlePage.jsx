@@ -1,4 +1,5 @@
 // src/pages/ArticlePage.jsx 
+import '../css/ArticlePage.css';
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PasswordPrompt from '../components/PasswordPrompt';

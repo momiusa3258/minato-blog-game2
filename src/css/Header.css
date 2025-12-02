@@ -1,0 +1,26 @@
+/* --- ヘッダー --- */
+#header {
+    padding: 20px;
+    border-bottom: 3px solid #e0f0ff;
+}
+#header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+#header h1 a {
+    color: #333;
+    text-decoration: none;
+}
+#header p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: #666;
+}
+.header-image {
+    width: 100%;
+    height: 250px;
+    background-image: url('/images/header-jellyfish.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
+}

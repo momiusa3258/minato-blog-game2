@@ -1,0 +1,135 @@
+
+body {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    background-color: #f9f9f9; 
+}
+
+a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+a:hover {
+    color: #ff6600;
+}
+
+/* 全体レイアウト (Layout)*/
+
+#container {
+    width: 980px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#main-wrapper {
+    display: flex;
+    padding: 20px;
+}
+
+#content {
+    width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    width: 30%;
+}
+
+#footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #aaa;
+}
+
+
+
+
+/*ゲーム特有のギミック (Game Gimmicks)*/
+
+/* ---隠し文字 --- */
+.hidden-text {
+    color: #ffffff; 
+    transition: color 0.2s;
+}
+.hidden-text::selection {
+    color: #333;
+    background: #e0f0ff;
+}
+.hidden-text:hover {
+    cursor: text;
+}
+
+/* ---最終分岐 --- */
+.final-choice {
+    margin-top: 50px;
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+}
+.final-choice button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.glitch-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+}
+.glitch-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.final-choice.active {
+    position: relative;
+    z-index: 100;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* ---エンディング画面 --- */
+.ending-container {
+    height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ending-content {
+    max-width: 600px;
+    text-align: center;
+}
+.ending-content p {
+    white-space: pre-wrap;
+    line-height: 1.7;
+}
+.ending-content a {
+    color: #4a90e2;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+
+

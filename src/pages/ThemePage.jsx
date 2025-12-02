@@ -1,5 +1,6 @@
 // src/pages/ThemePage.jsx
 import React from 'react';
+import '../css/ArticlePage.css';
 import { useParams, Link } from 'react-router-dom';
 import { articles } from '../data/gameData';
 

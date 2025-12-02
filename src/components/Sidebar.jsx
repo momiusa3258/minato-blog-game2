@@ -1,4 +1,5 @@
 // src/components/Sidebar.jsx
+import '../css/Sidebar.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { articles } from '../data/gameData';

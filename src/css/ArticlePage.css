@@ -1,0 +1,78 @@
+/* --- 記事 --- */
+.post {
+    margin-bottom: 30px;
+}
+.article-title {
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+.article-meta {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 20px;
+}
+.article-body p {
+    margin-bottom: 1.5em;
+}
+.article-navigation {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.article-navigation a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.article-navigation a:hover {
+    text-decoration: underline;
+    color: #ff6600;
+}
+
+/* --- 記事一覧 (Article List) --- */
+.theme-article-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.theme-article-list li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+}
+
+
+.theme-article-list .article-meta {
+  margin: 0 0 8px 0;
+  /* article-metaの、基本スタイルを、ここで、継承します */
+  font-size: 12px;
+  color: #888;
+}
+
+.theme-article-list a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+.theme-article-list a span { /* 鍵マークのスタイル */
+  margin-left: 10px;
+  color: #999;
+  font-weight: bold; /* 鍵マークは、太字にしない */
+}
+
+.theme-article-list p {
+  margin: 8px 0 0;
+  color: #666;
+}
+
+.theme-article-list p[style*="italic"] { /* 保護された記事の、特別なpタグ */
+  font-style: italic;
+}
+
