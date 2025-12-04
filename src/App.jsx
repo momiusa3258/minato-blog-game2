@@ -6,7 +6,6 @@ import BlogLayout from './components/BlogLayout';
 import ArticlePage from './pages/ArticlePage';
 import ProfilePage from './pages/ProfilePage';
 import EndingPage from './pages/EndingPage';
-import ThemePage from './pages/ThemePage';
 import HomePage from './pages/HomePage';
 import IntroPage from './pages/IntroPage';
 import ScrollToTop from './components/ScrollToTop';
@@ -42,9 +41,7 @@ function App() {
           />
           
           <Route path="profile" element={<ProfilePage />} />
-          <Route path="theme/:themeName" element={<ThemePage />} />
         </Route>
-
         <Route path="/ending/:endingId" element={<EndingPage />} />
         <Route path="/gameclear" element={<GameClearPage />} />
       </Routes>
