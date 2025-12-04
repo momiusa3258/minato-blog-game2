@@ -19,12 +19,12 @@ export default defineConfig({
         display: 'standalone', // ★重要★ これでブラウザの枠が消えて、全画面アプリになります
         icons: [
           {
-            src: '/images/favicon.png', // あなたが用意したアイコン
+            src: 'images/favicon.png', // あなたが用意したアイコン
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/images/favicon.png', // 大きいサイズも同じ画像を指定しておきます
+            src: 'images/favicon.png', // 大きいサイズも同じ画像を指定しておきます
             sizes: '512x512',
             type: 'image/png'
           }
