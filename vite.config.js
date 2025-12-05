@@ -22,13 +22,13 @@ export default defineConfig({
             src: 'images/favicon.png', // あなたが用意したアイコン
             sizes: '192x192',
             type: 'image/png',
-            purpose: 'any maskable'
+            purpose: 'any'
           },
           {
             src: 'images/favicon.png', // 大きいサイズも同じ画像を指定しておきます
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any maskable'
+            purpose: 'any'
           }
         ]
       }
