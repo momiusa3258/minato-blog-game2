@@ -1,14 +1,16 @@
-// src/components/Sidebar.jsx
+// src/components/Sidebar.jsx (リファクタリング版)
 import '../css/Sidebar.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { articles } from '../data/gameData';
+// ★ gameDataを直接読み込むのをやめ、フック（賢者）を呼びます
+import { useArticles } from '../hooks/useGameLogic';
 
-// isTruthRevealed を受け取るように変更
 const Sidebar = ({ isTruthRevealed }) => {
-  
-  // フィルタリングロジックだけ強化
-  const allArticles = Object.values(articles).filter(article => {
+  // ★ フックから「日付順に並んだ全記事リスト」をもらいます
+  const { allArticles } = useArticles();
+
+  // ★ ここでは「表示するかどうか」のフィルタリングだけに集中します
+  const visibleArticles = allArticles.filter(article => {
     // 1. 通常の「最後の記事(isFinal)」は隠す（ただしTrueEnd用は別扱い）
     if (article.isFinal && !article.isTrueEnd) return false;
 
@@ -17,9 +19,6 @@ const Sidebar = ({ isTruthRevealed }) => {
 
     return true;
   });
-
-  // 日付順に並び替え（そのまま）
-  const sortedArticles = allArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <aside id="sidebar">
@@ -36,7 +35,8 @@ const Sidebar = ({ isTruthRevealed }) => {
       <div className="widget latest-articles-widget">
         <h3 className="widget-title">全ての記事</h3>
         <ul className="widget-list">
-          {sortedArticles.map(article => (
+          {/*サイドバーからのリンク*/}
+          {visibleArticles.map(article => (
             <li key={article.id}>
               <Link to={`/home/article/${article.id}`}>
                 {article.title}

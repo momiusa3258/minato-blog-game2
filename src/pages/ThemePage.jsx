@@ -1,30 +1,24 @@
 // src/pages/ThemePage.jsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { articles } from '../data/gameData';
+import { useArticles, stripCommands, truncateText } from '../hooks/useGameLogic';
 
-// テキストを短くする関数（HomePageと同じ）
-const stripCommands = (content) => {
-  return content.replace(/(\[HIDDEN\].*?\[\/HIDDEN\]|\[IMAGE:.+?\]|\[LINK:.+?\])/g, '');
-};
-const truncateText = (text, length) => {
-  const cleanedText = text.replace(/\n/g, ' ');
-  if (cleanedText.length <= length) return cleanedText;
-  return cleanedText.substring(0, length) + '...';
-};
+// --- ここにあった関数定義も削除 ---
 
-// isTruthRevealed を受け取るようにします
 const ThemePage = ({ isTruthRevealed }) => {
   const { themeName } = useParams();
+  
+  // フックからデータをもらう
+  const { allArticles } = useArticles();
 
-  const filteredArticles = Object.values(articles).filter(article => {
+  const filteredArticles = allArticles.filter(article => {
     // 1. テーマが一致しないものは除外
     if (article.theme !== themeName) return false;
 
     // 2. 従来の「最後の記事(isFinal)」は隠す（TrueEnd以外）
     if (article.isFinal && !article.isTrueEnd) return false;
 
-    // 3. 「隠し記事(isHidden)」は、フラグ(isTruthRevealed)が立っていないと隠す
+    // 3. 「隠し記事(isHidden)」は、フラグが立っていないと隠す
     if (article.isHidden && !isTruthRevealed) return false;
 
     return true;
@@ -58,7 +52,6 @@ const ThemePage = ({ isTruthRevealed }) => {
         ))}
       </ul>
       
-      {/* 記事がない場合のメッセージ */}
       {filteredArticles.length === 0 && (
         <p>この記事はまだありません。</p>
       )}

@@ -20,7 +20,7 @@ const IntroPage = () => {
           このブログに投稿された、全ての記録を閲覧し、その奥に隠された<strong>「真実」</strong>を突き止めること。<br />
           それがこのゲームの目的です。
         </p>
-        {/* aタグを、React RouterのLinkコンポーネントに、進化させます */}
+        {/* aタグを、React RouterのLinkコンポーネントに、進化*/}
         <Link to="/home" className="button">湊の個人ブログへ</Link>
       </div>
     </div>

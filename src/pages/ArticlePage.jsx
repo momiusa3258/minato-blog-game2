@@ -1,11 +1,11 @@
 // src/pages/ArticlePage.jsx 
 import '../css/ArticlePage.css';
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom'; // useNavigateを追加
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import PasswordPrompt from '../components/PasswordPrompt';
 import ContentRenderer from '../components/ContentRenderer';
 import FinalChoice from '../components/FinalChoice';
-import { useArticleNavigation } from '../hooks/useArticleNavigation';
+import { useArticleNavigation } from '../hooks/useGameLogic';
 import { articles } from '../data/gameData';
 
 const ArticlePage = ({ unlocked, onCorrectPassword }) => {
