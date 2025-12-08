@@ -5,13 +5,17 @@ import { Link } from 'react-router-dom';
 import { useArticles, stripCommands, truncateText } from '../hooks/useGameLogic';
 
 const HomePage = ({ isTruthRevealed }) => {
+  // allArticles は「古い順」で入っています
   const { allArticles } = useArticles();
 
   const visibleArticles = allArticles.filter(article => {
+    // 1. 通常の最終記事は隠す（TrueEndは例外）
     if (article.isFinal && !article.isTrueEnd) return false;
+    // 2. 隠し記事はフラグが立っていないと隠す
     if (article.isHidden && !isTruthRevealed) return false;
     return true;
-  });
+  })
+  .reverse(); // ★★★ ここで「新しい順」に反転させます ★★★
 
   return (
     <div>

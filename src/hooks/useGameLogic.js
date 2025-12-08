@@ -5,25 +5,29 @@ import { articles } from '../data/gameData';
 
 // --- 1. 記事データを管理するロジック ---
 export const useArticles = () => {
-  // 日付順（古い順 -> 新しい順）に並べたリスト
+  // ■ マスターデータ：物語の順序（古い順 -> 新しい順）
+  // ナビゲーション（次の記事へ）で使うため、物語の時系列通りにします
   const sortedAll = useMemo(() => {
-    return Object.values(articles).sort((a, b) => new Date(b.date) - new Date(a.date));
+    return Object.values(articles).sort((a, b) => new Date(a.date) - new Date(b.date));
   }, []);
 
-  // 一覧表示用（最後の記事を隠した）リスト
+  // ■ 表示用データ：ブログの並び（新しい順 -> 古い順）
+  // ホーム画面やサイドバーで使うため、最新記事を上にします
   const publicArticles = useMemo(() => {
-    return sortedAll.filter(article => !article.isFinal);
+    return sortedAll
+      .filter(article => !article.isFinal) // 最後の記事を隠す
+      .sort((a, b) => new Date(b.date) - new Date(a.date)); // ★★★ ここで「新しい順（降順）」に並べ替え ★★★
   }, [sortedAll]);
 
   return { 
-    allArticles: sortedAll,
-    publicArticles: publicArticles
+    allArticles: sortedAll,      // ナビゲーション用（昇順）
+    publicArticles: publicArticles // 表示用（降順）
   };
 };
 
 // --- 2. 記事の前後ナビゲーションを管理するロジック ---
 export const useArticleNavigation = (articleId) => {
-  // ★ 同じファイル内なので、上で定義した useArticles をそのまま使えます
+  // ナビゲーション計算には「物語順（昇順）」のリストを使います
   const { allArticles } = useArticles();
 
   const currentIndex = allArticles.findIndex(a => a.id === articleId);
@@ -48,7 +52,9 @@ export const useScrollToTop = () => {
   }, [pathname]);
 };
 
-  // 白文字などのコマンドを除去する関数
+// --- ユーティリティ関数 ---
+
+// 白文字などのコマンドを除去する関数
 export const stripCommands = (content) => {
   if (!content) return '';
   return content.replace(/(\[HIDDEN\].*?\[\/HIDDEN\]|\[IMAGE:.+?\]|\[LINK:.+?\])/g, '');
