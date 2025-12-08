@@ -12,7 +12,7 @@ const Sidebar = ({ isTruthRevealed }) => {
     if (article.isHidden && !isTruthRevealed) return false;
     return true;
   })
-  .reverse(); // ★★★ ここで「新しい順」に反転させます ★★★
+  .reverse(); // ここで「新しい順」に反転させます
 
   return (
     <aside id="sidebar">
